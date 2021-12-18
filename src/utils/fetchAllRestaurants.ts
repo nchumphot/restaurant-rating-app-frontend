@@ -1,6 +1,6 @@
-import { IRestaurant } from "./IRestaurant";
+import { IRestaurant } from "../interfaces/IRestaurant";
 
-export function fetchData(
+export function fetchAllRestaurants(
   url: string,
   setState: React.Dispatch<React.SetStateAction<IRestaurant[]>>
 ) {
