@@ -1,8 +1,8 @@
-import { IRestaurantReview } from "../interfaces/IRestaurantReview";
+import { IRestaurant } from "../interfaces/IRestaurant";
 
-export function fetchOneRestaurant(
+export function fetchRestaurants(
   url: string,
-  setState: React.Dispatch<React.SetStateAction<IRestaurantReview[]>>
+  setState: React.Dispatch<React.SetStateAction<IRestaurant[]>>
 ) {
   fetch(url)
     .then((response) => response.json())
@@ -10,7 +10,7 @@ export function fetchOneRestaurant(
       (jsonBody: {
         status: string;
         message: string;
-        response: IRestaurantReview[];
+        response: IRestaurant[];
       }) => {
         console.log(jsonBody);
         setState(jsonBody.response);

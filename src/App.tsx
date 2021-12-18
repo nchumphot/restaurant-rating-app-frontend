@@ -3,14 +3,14 @@ import { AllRestaurants } from "./components/AllRestaurants";
 import { PageHeader } from "./components/PageHeader";
 import { SelectedRestaurant } from "./components/SelectedRestaurant";
 import "./css/App.css";
-import { fetchAllRestaurants } from "./utils/fetchAllRestaurants";
+import { fetchRestaurants } from "./utils/fetchRestaurants";
 import { IRestaurant } from "./interfaces/IRestaurant";
 
 function App(): JSX.Element {
   const [allRestaurants, setAllRestaurants] = useState<IRestaurant[]>([]);
   const [selection, setSelection] = useState<number>(0);
   useEffect(() => {
-    fetchAllRestaurants("http://localhost:4000/restaurants", setAllRestaurants);
+    fetchRestaurants("http://localhost:4000/restaurants", setAllRestaurants);
   }, []);
   return (
     <>
