@@ -5,7 +5,7 @@ import { IRestaurantReview } from "../interfaces/IRestaurantReview";
 export function fetchComments(
   url: string,
   setRestaurant: React.Dispatch<React.SetStateAction<IRestaurant>>,
-  setReview: React.Dispatch<React.SetStateAction<IRestaurantReview[]>>
+  setReviews: React.Dispatch<React.SetStateAction<IRestaurantReview[]>>
 ) {
   fetch(url)
     .then((response) => response.json())
@@ -17,7 +17,7 @@ export function fetchComments(
       }) => {
         console.log(jsonBody);
         setRestaurant(jsonBody.response.info);
-        setReview(jsonBody.response.comments);
+        setReviews(jsonBody.response.comments);
       }
     );
 }
