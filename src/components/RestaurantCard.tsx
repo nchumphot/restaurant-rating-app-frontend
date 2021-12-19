@@ -7,10 +7,14 @@ export function RestaurantCard(props: {
 }): JSX.Element {
   return (
     <div className="restaurant-card">
-      <h3>{props.restaurant.name}</h3>
-      <small>{`${props.restaurant.street}, ${props.restaurant.city} ${props.restaurant.postcode}`}</small>
-      <br />
-      <br />
+      <div className="restaurant-name">
+        <h3>{props.restaurant.name}</h3>
+      </div>
+      <div className="restaurant-address">
+        <small>{`${props.restaurant.street}`}</small>
+        <br />
+        <small>{`${props.restaurant.city} ${props.restaurant.postcode}`}</small>
+      </div>
       <button
         onClick={() => {
           props.setSelection(props.restaurant.id);

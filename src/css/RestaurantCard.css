@@ -4,3 +4,15 @@
   margin: 0.5%;
   padding: 0.5%;
 }
+
+.restaurant-address {
+  min-height: 72px;
+}
+
+.restaurant-name {
+  min-height: 3em;
+}
+
+.restaurant-name h3 {
+  margin: 0.2em 0;
+}
