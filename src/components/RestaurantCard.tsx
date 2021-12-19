@@ -1,11 +1,12 @@
 import { IRestaurant } from "../interfaces/IRestaurant";
+import "../css/RestaurantCard.css";
 
 export function RestaurantCard(props: {
   restaurant: IRestaurant;
   setSelection: React.Dispatch<React.SetStateAction<number>>;
 }): JSX.Element {
   return (
-    <>
+    <div className="restaurant-card">
       <h3>{props.restaurant.name}</h3>
       <small>{`${props.restaurant.street}, ${props.restaurant.city} ${props.restaurant.postcode}`}</small>
       <br />
@@ -18,6 +19,6 @@ export function RestaurantCard(props: {
       >
         See more
       </button>
-    </>
+    </div>
   );
 }

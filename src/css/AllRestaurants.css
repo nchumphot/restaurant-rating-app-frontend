@@ -1,0 +1,4 @@
+.restaurants-flex-box {
+  display: flex;
+  flex-flow: row wrap;
+}
